@@ -1,0 +1,187 @@
+/* 기본 설정 */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* 헤더 */
+header {
+    background: #2a5298;
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    margin: 0;
+}
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+header nav ul li {
+    margin-left: 20px;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+header nav ul li a:hover {
+    color: #ffdd57;
+}
+
+/* 메인 배너 */
+#home {
+    background: url('https://picsum.photos/1600/500?blur=2') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+}
+#home h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+#home p {
+    font-size: 1.2em;
+}
+
+/* 상품 목록 */
+#products {
+    padding: 60px 20px;
+    text-align: center;
+}
+#products h2 {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+}
+.product-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.product-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.product-item:hover {
+    transform: translateY(-10px);
+}
+.product-item h3 {
+    margin-top: 0;
+}
+.product-item button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background: #2a5298;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.product-item button:hover {
+    background: #1e3c72;
+}
+
+/* 소개 */
+#about {
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+}
+#about h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+/* 연락처 */
+#contact {
+    padding: 60px 20px;
+    background: #f9f9f9;
+}
+#contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#contact form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+#contact label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+#contact input,
+#contact textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+#contact button {
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: #2a5298;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+#contact button:hover {
+    background: #1e3c72;
+}
+
+/* 장바구니 */
+#cart {
+    padding: 60px 20px;
+    text-align: center;
+    background: #fff;
+}
+#cart h2 {
+    margin-bottom: 20px;
+}
+
+/* 푸터 */
+footer {
+    background: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    header nav ul li {
+        margin: 10px 0;
+    }
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}

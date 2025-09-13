@@ -1,10 +1,188 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-    <meta charset="utf-8">
-    <title>My Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기깔나는 웹페이지</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            overflow-x: hidden;
+        }
+        header {
+            padding: 20px 40px;
+            background: rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(10px);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #f1f1f1;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ffdd57;
+        }
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url('https://picsum.photos/1600/900?blur=2') no-repeat center center/cover;
+            position: relative;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hero h2 {
+            font-size: 3em;
+            margin: 0;
+            animation: fadeInDown 1s ease;
+        }
+        .hero p {
+            margin-top: 15px;
+            font-size: 1.2em;
+            animation: fadeInUp 1.5s ease;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 1em;
+            border: none;
+            border-radius: 25px;
+            background: #ffdd57;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.05);
+            background: #ffc107;
+        }
+        section {
+            padding: 80px 40px;
+            background: #fff;
+            color: #333;
+            text-align: center;
+        }
+        section h3 {
+            font-size: 2.2em;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        section h3::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #2a5298;
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+        .cards {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .card {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            width: 300px;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card h4 {
+            margin-top: 0;
+        }
+        footer {
+            padding: 30px;
+            text-align: center;
+            background: #111;
+            color: #aaa;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
-    <h1>안녕하세요, 제 블로그입니다!</h1>
+<header>
+    <h1>기깔나는 웹</h1>
+    <nav>
+        <a href="#about">소개</a>
+        <a href="#features">특징</a>
+        <a href="#contact">연락처</a>
+    </nav>
+</header>
+<section class="hero">
+    <div class="hero-content">
+        <h2>환영합니다!</h2>
+        <p>이곳은 세상에서 가장 기깔나는 웹페이지입니다.</p>
+        <button class="btn">지금 시작하기</button>
+    </div>
+</section>
+<section id="about">
+    <h3>소개</h3>
+    <p>저희는 감각적이고 스타일리시한 웹 경험을 제공하는 데 집중합니다.</p>
+</section>
+<section id="features">
+    <h3>특징</h3>
+    <div class="cards">
+        <div class="card">
+            <h4>반응형 디자인</h4>
+            <p>모든 기기에서 아름답게 보이도록 설계되었습니다.</p>
+        </div>
+        <div class="card">
+            <h4>애니메이션</h4>
+            <p>자연스럽고 매끄러운 모션 효과로 시선을 사로잡습니다.</p>
+        </div>
+        <div class="card">
+            <h4>모던 스타일</h4>
+            <p>세련되고 현대적인 감각으로 표현되었습니다.</p>
+        </div>
+    </div>
+</section>
+<section id="contact">
+    <h3>연락처</h3>
+    <p>궁금한 점이 있으시면 <a href="mailto:info@example.com">info@example.com</a>으로 메일 주세요.</p>
+</section>
+<footer>
+    &copy; 2025 기깔나는 웹. All Rights Reserved.
+</footer>
 </body>
 </html>
